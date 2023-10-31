@@ -1,5 +1,7 @@
 package br.com.sistemasdistribuidos.crudapp;
 
+import br.com.sistemasdistribuidos.crudapp.domain.Car;
+import br.com.sistemasdistribuidos.crudapp.domain.CarRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
