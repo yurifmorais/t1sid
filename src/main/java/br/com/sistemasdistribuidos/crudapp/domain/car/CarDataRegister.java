@@ -2,13 +2,12 @@ package br.com.sistemasdistribuidos.crudapp.domain.car;
 
 import javax.validation.constraints.NotNull;
 
-public record CarDataRegister(@NotNull
+public record CarDataRegister(
                               String county,
                               @NotNull
                               String city,
                               @NotNull
                               String state,
-                              @NotNull
                               String postalCode,
                               @NotNull
                               String modelYear,
@@ -16,9 +15,13 @@ public record CarDataRegister(@NotNull
                               String make,
                               @NotNull
                               String model,
-                              @NotNull
                               String electricVehicleType,
-                              @NotNull
-                              String cleanAlternativeFuelVehicleEligibility) {
+                              String cleanAlternativeFuelVehicleEligibility,
+                              String electricRange,
+                              String baseMsrp,
+                              String legislativeDistrict,
+                              String dolVehicleId,
+                              String vehicleLocation,
+                              String electricUtility,
+                              String censusTract) {
 }
-

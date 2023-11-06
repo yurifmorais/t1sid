@@ -3,7 +3,6 @@ package br.com.sistemasdistribuidos.crudapp.domain.car;
 import jakarta.persistence.*;
 import lombok.*;
 
-
 @Getter
 @NoArgsConstructor
 @Entity
@@ -12,6 +11,8 @@ public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+
     @Column(name = "county")
     private String county;
 
