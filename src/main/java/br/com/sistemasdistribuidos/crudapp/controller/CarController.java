@@ -23,7 +23,7 @@ public class CarController {
 
     @GetMapping
     public Page<CarListingData> getCars(@RequestParam(defaultValue = "0") int page) {
-        Pageable pageable = PageRequest.of(page, 20);
+        Pageable pageable = PageRequest.of(page, 100);
         return carRepository.findAll(pageable).map(CarListingData::new);
     }
 

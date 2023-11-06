@@ -1,84 +1,69 @@
 package br.com.sistemasdistribuidos.crudapp.domain.car;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Getter
 @NoArgsConstructor
-@Entity
-@Table(name = "Car")
+@AllArgsConstructor
+@Table(name = "car")
+@Entity(name = "Car")
+@EqualsAndHashCode(of = "id")
 public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-
-    @Column(name = "county")
     private String county;
-
-    @Column(name = "city")
     private String city;
-
-    @Column(name = "state")
     private String state;
 
-    @Column(name = "postalCode")
-    private String postalCode;
+    private String postalcode;
 
-    @Column(name = "modelYear")
-    private String modelYear;
+    private String modelyear;
 
-    @Column(name = "make")
     private String make;
 
-    @Column(name = "model")
     private String model;
 
-    @Column(name = "electricVehicleType")
-    private String electricVehicleType;
+    private String electricvehicletype;
 
-    @Column(name = "cleanAlternativeFuelVehicleEligibility")
-    private String cleanAlternativeFuelVehicleEligibility;
+    private String cleanalternativefuelvehicleeligibility;
 
-    @Column(name = "electricRange")
-    private String electricRange;
+    private String electricrange;
 
-    @Column(name = "baseMsrp")
-    private String baseMsrp;
+    private String basemsrp;
 
-    @Column(name = "legislativeDistrict")
-    private String legislativeDistrict;
+    private String legislativedistrict;
 
-    @Column(name = "dolVehicleId")
-    private String dolVehicleId;
+    private String dolvehicleid;
 
-    @Column(name = "vehicleLocation")
-    private String vehicleLocation;
+    private String vehiclelocation;
 
-    @Column(name = "electricUtility")
-    private String electricUtility;
+    private String electricutility;
 
-    @Column(name = "censusTract")
-    private String censusTract;
+    private String censustract;
 
     //generate a constructor with all the fields
-    public Car(String county, String city, String state, String postalCode, String modelYear, String make, String model, String electricVehicleType, String cleanAlternativeFuelVehicleEligibility, String electricRange, String baseMsrp, String legislativeDistrict, String dolVehicleId, String vehicleLocation, String electricUtility, String censusTract) {
+    public Car(String county, String city, String state, String postalcode, String modelyear, String make, String model, String electricvehicletype, String cleanalternativefuelvehicleeligibility, String electricrange, String basemsrp, String legislativedistrict, String dolvehicleid, String vehiclelocation, String electricutility, String censustract) {
         this.county = county;
         this.city = city;
         this.state = state;
-        this.postalCode = postalCode;
-        this.modelYear = modelYear;
+        this.postalcode = postalcode;
+        this.modelyear = modelyear;
         this.make = make;
         this.model = model;
-        this.electricVehicleType = electricVehicleType;
-        this.cleanAlternativeFuelVehicleEligibility = cleanAlternativeFuelVehicleEligibility;
-        this.electricRange = electricRange;
-        this.baseMsrp = baseMsrp;
-        this.legislativeDistrict = legislativeDistrict;
-        this.dolVehicleId = dolVehicleId;
-        this.vehicleLocation = vehicleLocation;
-        this.electricUtility = electricUtility;
-        this.censusTract = censusTract;
+        this.electricvehicletype = electricvehicletype;
+        this.cleanalternativefuelvehicleeligibility = cleanalternativefuelvehicleeligibility;
+        this.electricrange = electricrange;
+        this.basemsrp = basemsrp;
+        this.legislativedistrict = legislativedistrict;
+        this.dolvehicleid = dolvehicleid;
+        this.vehiclelocation = vehiclelocation;
+        this.electricutility = electricutility;
+        this.censustract = censustract;
     }
 
     //generate a constructor that receives a CarDataRegister object
@@ -86,11 +71,11 @@ public class Car {
         this.county = carData.county();
         this.city = carData.city();
         this.state = carData.state();
-        this.postalCode = carData.postalCode();
-        this.modelYear = carData.modelYear();
+        this.postalcode = carData.postalcode();
+        this.modelyear = carData.modelyear();
         this.make = carData.make();
         this.model = carData.model();
-        this.electricVehicleType = carData.electricVehicleType();
-        this.cleanAlternativeFuelVehicleEligibility = carData.cleanAlternativeFuelVehicleEligibility();
+        this.electricvehicletype = carData.electricvehicletype();
+        this.cleanalternativefuelvehicleeligibility = carData.cleanalternativefuelvehicleeligibility();
     }
 }
