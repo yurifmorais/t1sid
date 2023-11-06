@@ -2,8 +2,7 @@ package br.com.sistemasdistribuidos.crudapp.domain.car;
 
 import jakarta.validation.constraints.NotNull;
 
-public record CarDataRegister(@NotNull
-                              Long id,
+public record CarDataRegister(
                               @NotNull
                               String county,
                               @NotNull
